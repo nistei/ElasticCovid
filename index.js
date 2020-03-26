@@ -4,12 +4,21 @@ const moment = require('moment');
 const {Client} = require('@elastic/elasticsearch');
 const covid = require('./novelcovid');
 const mappings = require('./countryMappings.json');
+const CronJob = require("cron").CronJob;
 
-const elastic = new Client({node: 'http://localhost:9200'});
 const currentIndexName = 'covid';
+const elastic = new Client({node: getElasticConnect()});
 
 function shouldGetHistory() {
-    return process.argv.includes('history');
+    return process.env.HISTORY === 'true';
+}
+
+function getInterval() {
+    return process.env.INTERVAL;
+}
+
+function getElasticConnect() {
+    return process.env.ELASTIC_URL;
 }
 
 function generateCountryInfo(name) {
@@ -174,4 +183,9 @@ async function run() {
     await elastic.indices.refresh({index: currentIndexName});
 }
 
-run().catch(console.log);
+
+// Run this cron job every 5 minutes
+new CronJob(`*/${getInterval()} * * * *`, function() {
+    run().catch(console.log);
+}, null, true);
+
