@@ -95,9 +95,9 @@ async function bulkAddDocs(arr) {
 }
 
 async function run() {
-    let countries = await covid.getCountry();
+    let countries = await covid.getCountry({}, config.api.host);
     let all_histories = [];
-    (await covid.getHistorical()).forEach(x => {
+    (await covid.getHistorical({}, config.api.host)).forEach(x => {
         all_histories.push(convertTimeline(x))
     });
 

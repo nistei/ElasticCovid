@@ -5,5 +5,5 @@
   "elasticsearch": {
     "host": "http://localhost:9200"
   },
-  "interval": -1
+  "interval": 5
 }
