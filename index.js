@@ -3,45 +3,52 @@ require('array.prototype.flatmap').shim();
 const moment = require('moment');
 const {Client} = require('@elastic/elasticsearch');
 const covid = require('./novelcovid');
-const mappings = require('./countryMappings.json');
 const CronJob = require("cron").CronJob;
 
+const mappings = require('./countryMappings.json');
+const config = require('./config.json');
+
 const currentIndexName = 'covid';
-const elastic = new Client({node: getElasticConnect()});
+const elastic = new Client({node: config.elasticsearch.host});
 
-function shouldGetHistory() {
-    return process.env.HISTORY === 'true';
-}
 
-function getInterval() {
-    return process.env.INTERVAL;
-}
+function convertTimeline(original) {
+    console.info('converting timeline for', original.country, original.province);
+    let doc = {
+        country: original.country,
+        province: original.province,
+        days: []
+    };
 
-function getElasticConnect() {
-    return process.env.ELASTIC_URL;
-}
-
-function generateCountryInfo(name) {
-    let country = mappings.find(x => x.name.toUpperCase() === name.toUpperCase());
-
-    if(country !== undefined) {
-        return {
-            iso2: country.country_code,
-            iso3: '',
-            _id: -1,
-            lat: country.latlng[0],
-            long: country.latlng[1],
-            flag: `https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/${country.country_code.toLowerCase()}.png`
-        };
+    // Transform and add cases
+    console.debug('converting cases for', original.country, original.province);
+    if (original.timeline.cases !== {}) {
+        for (let [date, cases] of Object.entries(original.timeline.cases)) {
+            doc.days.push({
+                date: moment.tz(date, 'MM/DD/YY', 'UTC').valueOf(),
+                cases
+            })
+        }
     }
 
-    return undefined;
+    // Add deaths to correlating doc
+    console.debug('converting deaths for', original.country, original.province);
+    if (original.timeline.deaths !== {}) {
+        for (let [date, deaths] of Object.entries(original.timeline.deaths)) {
+            let d = doc.days.find(x => x.date === moment.tz(date, 'MM/DD/YY', 'UTC').valueOf());
+            d.deaths = deaths;
+        }
+    }
+
+    // Return transformed docs
+    return doc;
 }
 
 async function deleteAndRecreate() {
     // Delete index
     await elastic.indices.delete({
-        index: currentIndexName
+        index: currentIndexName,
+        ignore_unavailable: true
     });
 
     // Create index
@@ -50,11 +57,11 @@ async function deleteAndRecreate() {
         body: {
             mappings: {
                 properties: {
-                    location: {
-                        type: 'geo_point'
-                    },
                     date: {
                         type: 'date'
+                    },
+                    deathsPerOneMillion: {
+                        type: 'long'
                     }
                 }
             }
@@ -64,8 +71,8 @@ async function deleteAndRecreate() {
 
 async function bulkAddDocs(arr) {
     // Bulk add countries
-    const body = arr.flatMap(doc => [{ index: { _index: currentIndexName } }, doc]);
-    const { body: bulkResponse } = await elastic.bulk({ refresh: true, body });
+    const body = arr.flatMap(doc => [{index: {_index: currentIndexName}}, doc]);
+    const {body: bulkResponse} = await elastic.bulk({refresh: true, body});
 
     if (bulkResponse.errors) {
         const erroredDocuments = [];
@@ -80,112 +87,130 @@ async function bulkAddDocs(arr) {
                 })
             }
         });
-        console.log(erroredDocuments)
+        console.warn(erroredDocuments)
     }
 
-    const { body: count } = await elastic.count({ index: currentIndexName });
+    const {body: count} = await elastic.count({index: currentIndexName});
     console.log(count);
 }
 
 async function run() {
     let countries = await covid.getCountry();
-
-    // Transform countries
-    countries.forEach(entry => {
-        entry.date = moment().valueOf();
-        if(entry.countryInfo._id === 'NO DATA') {
-            let info = generateCountryInfo(entry.country);
-
-            if(info !== undefined) {
-                entry.countryInfo = info;
-            }
-        }
-
-        entry.countryInfo.location = `${entry.countryInfo.lat},${entry.countryInfo.long}`;
-
-        delete entry.countryInfo.lat;
-        delete entry.countryInfo.long;
+    let all_histories = [];
+    (await covid.getHistorical()).forEach(x => {
+        all_histories.push(convertTimeline(x))
     });
 
-    if(shouldGetHistory()) {
-        // Get history for every country
 
-        await deleteAndRecreate();
-        await countries.forEach(async country => {
-            console.log(`Getting history for: ${country.country}`);
+    let docs = [];
+    // Transform current to elastic docs
+    for (let cnt = 0; cnt < countries.length; cnt++) {
+        let country = countries[cnt];
 
-            let docs = [];
-            // Get History
-            let history = await covid.getHistorical({country: country.country});
+        console.info("Transforming data for", country.country);
 
-            if(history.timeline.cases !== {}) {
-                for (let [date, cases] of Object.entries(history.timeline.cases)) {
-                    docs.push({
-                        date: moment(date, 'MM/DD/YY').valueOf(),
-                        cases,
-                        country: country.country,
-                        countryInfo: country.countryInfo
-                    })
-                }
-            }
+        let mapping = mappings.find(x => x.live_country.toUpperCase() === country.country.toUpperCase());
 
-            if(history.timeline.deaths !== {}) {
-                for (let [date, deaths] of Object.entries(history.timeline.deaths)) {
-                    let d = docs.find(x => x.date === moment(date, 'MM/DD/YY').valueOf());
-                    d.deaths = deaths;
-                }
-            }
+        if (mapping !== null && mapping !== undefined) {
+            //console.debug("Found mapping", mapping);
 
-            // Post process docs
+            let lastCases = 0;
+            let lastDeaths = 0;
 
-            // Calculate days since 100 cases
+            // Over 100
             let firstOverIndex = 0;
-            let lastOverIndex = 0;
-            docs.forEach((doc, i) => {
-               if(doc.cases >= 100) {
-                   if(firstOverIndex === 0) {
-                       firstOverIndex = i;
-                   }
+            let lastOverIndex = -1;
 
-                   lastOverIndex = i - firstOverIndex;
-                   doc.daysSinceOneHundred = lastOverIndex;
-               }
+            // Calculate history
+            if (mapping.history_entries.length > 0) {
+                console.info("Generating history for", country.country);
+
+                // Attatch all histories
+                let histories = [];
+                mapping.history_entries.forEach(history_to_find => {
+                    histories.push(all_histories.find(h => h.country === history_to_find.country && h.province === history_to_find.province));
+                });
+
+                // Aggregate all histories
+                let history = histories[0];
+
+                if (histories.length > 1) {
+                    for (let i = 1; i < histories.length; i++) {
+                        for (let day = 0; day < histories[i].days.length; day++) {
+                            history.days[day].deaths += histories[i].days[day].deaths;
+                            history.days[day].cases += histories[i].days[day].cases;
+                        }
+                    }
+                }
+
+                // TODO: Find Population counts used in live docs
+                // Genereate history docs
+                history.days.forEach((day, i) => {
+                    let doc = {
+                        date: day.date,
+                        country: {
+                            name: mapping.live_country,
+                            code: mapping.country_code,
+                        },
+                        cases: day.cases,
+                        deaths: day.deaths,
+                        todayCases: day.cases - lastCases,
+                        todayDeaths: day.deaths - lastDeaths,
+                        casesPerOneMillion: day.cases / (mapping.population / 1000000),
+                        deathsPerOneMillion: day.deaths / (mapping.population / 1000000)
+                    };
+
+                    if (doc.cases >= 100) {
+                        if (firstOverIndex === 0) {
+                            firstOverIndex = i;
+                        }
+
+                        lastOverIndex = i - firstOverIndex;
+                        doc.daysSinceOneHundred = lastOverIndex;
+                    }
+
+                    lastCases = day.cases;
+                    lastDeaths = day.deaths;
+
+                    docs.push(doc);
+                });
+            }
+
+            // Generate today based on history
+            docs.push({
+                date: moment().valueOf(),
+                country: {
+                    name: mapping.live_country,
+                    code: mapping.country_code,
+                },
+                cases: country.cases,
+                todayCases: country.todayCases,
+                deaths: country.deaths,
+                todayDeaths: country.todayDeaths,
+                recovered: country.recovered,
+                active: country.active,
+                critical: country.critical,
+                casesPerOneMillion: country.casesPerOneMillion,
+                deathsPerOneMillion: country.deathsPerOneMillion,
+                daysSinceOneHundred: country.cases >= 100 ? ++lastOverIndex : null
             });
-
-            // Add it to the current day as well
-            if(firstOverIndex === 0 && country.cases >= 100) {
-                country.daysSinceOneHundred = 0;
-            } else {
-                country.daysSinceOneHundred = lastOverIndex + 1;
-            }
-            // Add current day to the docs
-            docs.push(country);
-
-            // Calculate todays deaths
-            for (let i = docs.length - 1; i >= 1; i--) {
-                docs[i].todayDeaths = docs[i].deaths - docs[i - 1].deaths;
-                docs[i].todayCases = docs[i].cases - docs[i - 1].cases;
-            }
-
-
-            if(docs.length <= 1) {
-                console.warn('No historical entries for ', country);
-            }
-
-            await bulkAddDocs(docs);
-        });
-    }
-    else {
-        await deleteAndRecreate();
-        await bulkAddDocs(countries);
+        } else {
+            console.warn('Missing mapping for', country);
+        }
     }
 
-    await elastic.indices.refresh({index: currentIndexName});
+    console.info('Bulk adding all docs');
+    await deleteAndRecreate();
+    await bulkAddDocs(docs);
 }
 
 
-// Run this cron job every 5 minutes
-new CronJob(`*/${getInterval()} * * * *`, function() {
+if (config.interval > 0) {
+// Run this cron job every x minutes
+    new CronJob(`*/${config.interval} * * * *`, function () {
+        run().catch(console.log);
+    }, null, true);
+} else {
     run().catch(console.log);
-}, null, true);
+}
 

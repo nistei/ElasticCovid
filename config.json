@@ -1,0 +1,9 @@
+{
+  "api": {
+    "host": "http://localhost:3000"
+  },
+  "elasticsearch": {
+    "host": "http://localhost:9200"
+  },
+  "interval": -1
+}

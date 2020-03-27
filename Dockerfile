@@ -12,5 +12,6 @@ RUN npm install && \
 COPY index.js index.js
 COPY ./novelcovid/ ./novelcovid/
 COPY ./countryMappings.json ./countryMappings.json
+COPY ./config.json.json ./config.json
 
 CMD [ "npm", "start" ]
