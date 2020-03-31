@@ -1,9 +1,11 @@
 {
   "api": {
-    "host": "http://localhost:3000"
+    "host": "https://corona.lmao.ninja"
   },
   "elasticsearch": {
-    "host": "http://localhost:9200"
+    "host": "http://localhost:9200",
+    "username": "elastic",
+    "password": ""
   },
-  "interval": 5
+  "interval": -1
 }

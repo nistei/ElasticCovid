@@ -1,33 +1,18 @@
-const methods = {
-    getCountry: require('./funcs/getCountry.js'),
-    getHistorical: require('./funcs/getHistorical.js'),
-};
+const fetch = require('node-fetch');
 
 module.exports = {
     version: "1.0.7-b3",
-    getCountry: function (params, baseUrl) {
-        if (!params || params === {}) return execute({method: 'getCountry', country: null, sort: null}, baseUrl);
-        if (params.country || params.sort) return execute({
-            method: 'getCountry',
-            country: params.country ? params.country : null,
-            sort: params.sort ? params.sort : null
-        }, baseUrl);
+    getCountry: async function (baseUrl) {
+        console.log('Fetching countries from', baseUrl);
+        let countries = await fetch(`${baseUrl}/countries`).then(r=>r.json());
+        if (countries.length === 0 || !countries) throw new Error("States could not be fetched, please try again later.");
+        else return countries
     },
-    getHistorical: function (params, baseUrl) {
-        if (!params || params === {}) return execute({method: 'getHistorical', country: null, sort: null}, baseUrl);
-        if (params.country) return execute({
-            method: 'getHistorical',
-            country: params.country ? params.country : null,
-            sort: null
-        }, baseUrl);
+    getHistorical: async function (baseUrl) {
+        console.log('Fetching history from', baseUrl);
+        let countries = await fetch(`${baseUrl}/v2/historical`).then(r=>r.json());
+        if (countries.length === 0 || !countries) throw new Error("History could not be fetched, please try again later.");
+        else return countries
     }
 };
 
-function execute(params, baseUrl) {
-
-    if (!params.sort) params.sort = null;
-    if (!params.country) params.country = null;
-    if (!baseUrl) baseUrl = 'http://localhost:3000';
-
-    return methods[params.method](params, baseUrl)
-}

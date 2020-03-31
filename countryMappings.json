@@ -249,7 +249,7 @@
   },
   {
     "country_code": "BA",
-    "live_country": "Bosnia",
+    "live_country": "Bosnia and Herzegovina",
     "population": "3507017",
     "history_entries": [
       {
@@ -384,10 +384,10 @@
   },
   {
     "country_code": "CF",
-    "live_country": "Central African Republic",
+    "live_country": "CAR",
     "history_entries": [
       {
-        "country": "central african republic",
+        "country": "Central African Republic",
         "province": null
       }
     ],
@@ -584,7 +584,7 @@
     "live_country": "Congo",
     "history_entries": [
       {
-        "country": "congo (brazzaville)",
+        "country": "congo",
         "province": null
       }
     ],
@@ -592,7 +592,7 @@
   },
   {
     "country_code": "CD",
-    "live_country": "Congo, the Democratic Republic of the",
+    "live_country": "DRC",
     "population": "81340000",
     "history_entries": [
       {
@@ -614,11 +614,11 @@
   },
   {
     "country_code": "CI",
-    "live_country": "Coast D'Ivoire",
+    "live_country": "Ivory Coast",
     "population": "24294750",
     "history_entries": [
       {
-        "country": "cote d'ivoire",
+        "country": "Côte d'Ivoire",
         "province": null
       }
     ]
@@ -680,7 +680,7 @@
   },
   {
     "country_code": "FO",
-    "live_country": "Faroe Islands",
+    "live_country": "Faeroe Islands",
     "history_entries": [
       {
         "country": "denmark",
@@ -801,10 +801,10 @@
   },
   {
     "country_code": "SZ",
-    "live_country": "Swaziland",
+    "live_country": "Eswatini",
     "history_entries": [
       {
-        "country": "eswatini",
+        "country": "Swaziland",
         "province": null
       }
     ],
@@ -1076,7 +1076,7 @@
   },
   {
     "country_code": "VA",
-    "live_country": "Holy See (Vatican City State)",
+    "live_country": "Vatican City",
     "history_entries": [
       {
         "country": "holy see",
@@ -1142,7 +1142,7 @@
   },
   {
     "country_code": "IR",
-    "live_country": "Iran, Islamic Republic of",
+    "live_country": "Iran",
     "population": "81162788",
     "history_entries": [
       {
@@ -1189,7 +1189,7 @@
     "live_country": "Italy",
     "history_entries": [
       {
-        "country": "italy",
+        "country": "Italy",
         "province": null
       }
     ],
@@ -1428,11 +1428,11 @@
   },
   {
     "country_code": "MD",
-    "live_country": "Moldova, Republic of",
+    "live_country": "Moldova",
     "population": "4051212",
     "history_entries": [
       {
-        "country": "moldova",
+        "country": "Moldova, Republic of",
         "province": null
       }
     ]
@@ -1582,11 +1582,11 @@
   },
   {
     "country_code": "MK",
-    "live_country": "Macedonia, the former Yugoslav Republic of",
+    "live_country": "North Macedonia",
     "population": "2024000",
     "history_entries": [
       {
-        "country": "north macedonia",
+        "country": "Macedonia",
         "province": null
       }
     ]
@@ -1758,10 +1758,10 @@
   },
   {
     "country_code": "VC",
-    "live_country": "Saint Vincent and the Grenadines",
+    "live_country": "St. Vincent Grenadines",
     "history_entries": [
       {
-        "country": "saint vincent and the grenadines",
+        "country": "Saint Vincent and the Grenadines",
         "province": null
       }
     ],
@@ -1956,11 +1956,11 @@
   },
   {
     "country_code": "TZ",
-    "live_country": "Tanzania, United Republic of",
+    "live_country": "Tanzania",
     "population": "57310000",
     "history_entries": [
       {
-        "country": "tanzania",
+        "country": "Tanzania, United Republic of",
         "province": null
       }
     ]
@@ -2147,7 +2147,7 @@
     "population": "324459463",
     "history_entries": [
       {
-        "country": "usa",
+        "country": "USA",
         "province": null
       }
     ]
@@ -2165,18 +2165,18 @@
   },
   {
     "country_code": "VE",
-    "live_country": "Venezuela, Bolivarian Republic of",
+    "live_country": "Venezuela",
     "population": "31977065",
     "history_entries": [
       {
-        "country": "venezuela",
+        "country": "Venezuela, Bolivarian Republic of",
         "province": null
       }
     ]
   },
   {
     "country_code": "VN",
-    "live_country": "Viet Nam",
+    "live_country": "Vietnam",
     "population": "95540800",
     "history_entries": [
       {
@@ -2242,11 +2242,11 @@
   },
   {
     "country_code": "SY",
-    "live_country": "Syrian Arab Republic",
+    "live_country": "Syria",
     "population": "18270000",
     "history_entries": [
       {
-        "country": "syria",
+        "country": "Syrian Arab Republic",
         "province": null
       }
     ]
@@ -2275,21 +2275,21 @@
   },
   {
     "country_code": "LA",
-    "live_country": "Lao People's Democratic Republic",
+    "live_country": "Laos",
     "population": "6858000",
     "history_entries": [
       {
-        "country": "laos",
+        "country": "Lao People's Democratic Republic",
         "province": null
       }
     ]
   },
   {
     "country_code": "LY",
-    "live_country": "Libyan Arab Jamahiriya",
+    "live_country": "Libya",
     "history_entries": [
       {
-        "country": "libya",
+        "country": "Libyan Arab Jamahiriya",
         "province": null
       }
     ],
@@ -2297,7 +2297,7 @@
   },
   {
     "country_code": "PS",
-    "live_country": "Palestinian Territory, Occupied",
+    "live_country": "Palestine",
     "population": "4920724",
     "history_entries": [
       {
@@ -2340,27 +2340,76 @@
     "population": "55345"
   },
   {
+    "country_code": "VG",
+    "live_country": "British Virgin Islands",
+    "population": "31196",
+    "history_entries": [
+      {
+        "country": "UK",
+        "province": "british virgin islands"
+      }
+    ]
+  },
+  {
+    "country_code": "TC",
+    "live_country": "Turks and Caicos",
+    "history_entries": [
+      {
+        "country": "UK",
+        "province": "turks and caicos islands"
+      }
+    ],
+    "population": "35446"
+  },
+  {
+    "country_code": "AI",
+    "live_country": "Anguilla",
+    "history_entries": [
+      {
+        "country": "UK",
+        "province": "anguilla"
+      }
+    ],
+    "population": "14909"
+  },
+  {
     "country_code": "MM",
     "live_country": "Myanmar",
     "history_entries": [],
     "population": "53370609"
   },
   {
-    "country_code": "VG",
-    "live_country": "British Virgin Islands",
-    "population": "31196",
+    "country_code": "",
+    "live_country": "MS Zaandam",
+    "population": "4000",
+    "history_entries": [
+      {
+        "country": "MS Zaandam",
+        "province": null
+      }
+    ]
+  },
+  {
+    "country_code": "BI",
+    "live_country": "Burundi",
+    "population": "10860000",
     "history_entries": []
   },
   {
-    "country_code": "TC",
-    "live_country": "Turks and Caicos Islands",
-    "history_entries": [],
-    "population": "35446"
+    "country_code": "SL",
+    "live_country": "Sierra Leone",
+    "population": "7557000",
+    "history_entries": []
   },
   {
-    "country_code": "AI",
-    "live_country": "Anguilla",
-    "history_entries": [],
-    "population": "14909"
+    "country_code": "BW",
+    "live_country": "Botswana",
+    "population": "2292000",
+    "history_entries": [
+      {
+        "country": "Botswana",
+        "province": null
+      }
+    ]
   }
 ]

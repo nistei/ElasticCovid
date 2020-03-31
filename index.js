@@ -5,11 +5,16 @@ const {Client} = require('@elastic/elasticsearch');
 const covid = require('./novelcovid');
 const CronJob = require("cron").CronJob;
 
-const mappings = require('./countryMappings.json');
 const config = require('./config.json');
 
 const currentIndexName = 'covid';
-const elastic = new Client({node: config.elasticsearch.host});
+const elastic = new Client({
+    node: config.elasticsearch.host,
+    auth: {
+        username: config.elasticsearch.username ? config.elasticsearch.username : null,
+        password: config.elasticsearch.password ? config.elasticsearch.password : null
+    }
+});
 
 
 function convertTimeline(original) {
@@ -95,9 +100,13 @@ async function bulkAddDocs(arr) {
 }
 
 async function run() {
-    let countries = await covid.getCountry({}, config.api.host);
+    console.log('Reloading Mappings');
+    const mappings = require('./countryMappings.json');
+
+    console.log('Staring to fetch data');
+    let countries = await covid.getCountry(config.api.host);
     let all_histories = [];
-    (await covid.getHistorical({}, config.api.host)).forEach(x => {
+    (await covid.getHistorical(config.api.host)).forEach(x => {
         all_histories.push(convertTimeline(x))
     });
 
@@ -128,7 +137,15 @@ async function run() {
                 // Attatch all histories
                 let histories = [];
                 mapping.history_entries.forEach(history_to_find => {
-                    histories.push(all_histories.find(h => h.country === history_to_find.country && h.province === history_to_find.province));
+                    histories.push(all_histories.find(h => {
+                        const h_country = h.country === null ? null : h.country.toUpperCase();
+                        const h_province = h.province === null ? null : h.province.toUpperCase();
+
+                        const f_country = history_to_find.country === null ? null : history_to_find.country.toUpperCase();
+                        const f_province = history_to_find.province === null ? null : history_to_find.province.toUpperCase();
+
+                         return h_country === f_country && h_province === f_province;
+                    }));
                 });
 
                 // Aggregate all histories
@@ -143,37 +160,43 @@ async function run() {
                     }
                 }
 
+                mapping.population = (country.cases * 1000000) / country.casesPerOneMillion;
+
                 // TODO: Find Population counts used in live docs
                 // Genereate history docs
-                history.days.forEach((day, i) => {
-                    let doc = {
-                        date: day.date,
-                        country: {
-                            name: mapping.live_country,
-                            code: mapping.country_code,
-                        },
-                        cases: day.cases,
-                        deaths: day.deaths,
-                        todayCases: day.cases - lastCases,
-                        todayDeaths: day.deaths - lastDeaths,
-                        casesPerOneMillion: day.cases / (mapping.population / 1000000),
-                        deathsPerOneMillion: day.deaths / (mapping.population / 1000000)
-                    };
+                if(history !== undefined) {
+                    history.days.forEach((day, i) => {
+                        let doc = {
+                            date: day.date,
+                            country: {
+                                name: mapping.live_country,
+                                code: mapping.country_code,
+                            },
+                            cases: day.cases,
+                            deaths: day.deaths,
+                            todayCases: day.cases - lastCases,
+                            todayDeaths: day.deaths - lastDeaths,
+                            casesPerOneMillion: day.cases / (mapping.population / 1000000),
+                            deathsPerOneMillion: day.deaths / (mapping.population / 1000000)
+                        };
 
-                    if (doc.cases >= 100) {
-                        if (firstOverIndex === 0) {
-                            firstOverIndex = i;
+                        if (doc.cases >= 100) {
+                            if (firstOverIndex === 0) {
+                                firstOverIndex = i;
+                            }
+
+                            lastOverIndex = i - firstOverIndex;
+                            doc.daysSinceOneHundred = lastOverIndex;
                         }
 
-                        lastOverIndex = i - firstOverIndex;
-                        doc.daysSinceOneHundred = lastOverIndex;
-                    }
+                        lastCases = day.cases;
+                        lastDeaths = day.deaths;
 
-                    lastCases = day.cases;
-                    lastDeaths = day.deaths;
-
-                    docs.push(doc);
-                });
+                        docs.push(doc);
+                    });
+                } else {
+                    console.warn('Misconfigured history mapping for', country);
+                }
             }
 
             // Generate today based on history
@@ -206,7 +229,9 @@ async function run() {
 
 
 if (config.interval > 0) {
-// Run this cron job every x minutes
+    run().catch(console.log);
+
+    // Run this cron job every x minutes
     new CronJob(`*/${config.interval} * * * *`, function () {
         run().catch(console.log);
     }, null, true);
