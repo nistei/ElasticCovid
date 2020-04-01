@@ -2,7 +2,7 @@ require('array.prototype.flatmap').shim();
 
 const moment = require('moment');
 const {Client} = require('@elastic/elasticsearch');
-const covid = require('./novelcovid');
+const { NovelCovid } = require('novelcovid');
 const CronJob = require("cron").CronJob;
 
 const config = require('./config.json');
@@ -15,6 +15,9 @@ const elastic = new Client({
         password: config.elasticsearch.password ? config.elasticsearch.password : null
     }
 });
+
+const covid = new NovelCovid();
+covid.baseURL = config.api.host;
 
 
 function convertTimeline(original) {
@@ -104,9 +107,9 @@ async function run() {
     const mappings = require('./countryMappings.json');
 
     console.log('Staring to fetch data');
-    let countries = await covid.getCountry(config.api.host);
+    let countries = await covid.countries();
     let all_histories = [];
-    (await covid.getHistorical(config.api.host)).forEach(x => {
+    (await covid.histroical()).forEach(x => {
         all_histories.push(convertTimeline(x))
     });
 

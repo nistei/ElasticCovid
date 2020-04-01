@@ -1,6 +1,6 @@
 {
   "name": "elasticcovid",
-  "version": "0.0.0",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "start": "node ./index.js"
@@ -11,6 +11,6 @@
     "cron": "^1.8.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
-    "node-fetch": "^2.6.0"
+    "novelcovid": "^1.1.0"
   }
 }
