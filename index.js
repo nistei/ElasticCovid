@@ -160,9 +160,8 @@ async function run() {
                     }
                 }
 
-                mapping.population = (country.cases * 1000000) / country.casesPerOneMillion;
+                const population = (country.cases * 1000000) / country.casesPerOneMillion;
 
-                // TODO: Find Population counts used in live docs
                 // Genereate history docs
                 if(history !== undefined) {
                     history.days.forEach((day, i) => {
@@ -176,8 +175,8 @@ async function run() {
                             deaths: day.deaths,
                             todayCases: day.cases - lastCases,
                             todayDeaths: day.deaths - lastDeaths,
-                            casesPerOneMillion: day.cases / (mapping.population / 1000000),
-                            deathsPerOneMillion: day.deaths / (mapping.population / 1000000)
+                            casesPerOneMillion: day.cases / (population / 1000000),
+                            deathsPerOneMillion: day.deaths / (population / 1000000)
                         };
 
                         if (doc.cases >= 100) {

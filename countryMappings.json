@@ -7,8 +7,7 @@
         "country": "afghanistan",
         "province": null
       }
-    ],
-    "population": "35530081"
+    ]
   },
   {
     "country_code": "AL",
@@ -18,8 +17,7 @@
         "country": "albania",
         "province": null
       }
-    ],
-    "population": "2930187"
+    ]
   },
   {
     "country_code": "DZ",
@@ -29,8 +27,7 @@
         "country": "algeria",
         "province": null
       }
-    ],
-    "population": "41318142"
+    ]
   },
   {
     "country_code": "AD",
@@ -40,8 +37,7 @@
         "country": "andorra",
         "province": null
       }
-    ],
-    "population": "76965"
+    ]
   },
   {
     "country_code": "AO",
@@ -51,8 +47,7 @@
         "country": "angola",
         "province": null
       }
-    ],
-    "population": "29784193"
+    ]
   },
   {
     "country_code": "AG",
@@ -62,8 +57,7 @@
         "country": "antigua and barbuda",
         "province": null
       }
-    ],
-    "population": "102012"
+    ]
   },
   {
     "country_code": "AR",
@@ -73,8 +67,7 @@
         "country": "argentina",
         "province": null
       }
-    ],
-    "population": "44271041"
+    ]
   },
   {
     "country_code": "AM",
@@ -84,8 +77,7 @@
         "country": "armenia",
         "province": null
       }
-    ],
-    "population": "2930450"
+    ]
   },
   {
     "live_country": "Australia",
@@ -123,8 +115,7 @@
         "country": "australia",
         "province": "western australia"
       }
-    ],
-    "population": "24450561"
+    ]
   },
   {
     "country_code": "AT",
@@ -134,8 +125,7 @@
         "country": "austria",
         "province": null
       }
-    ],
-    "population": "8735453"
+    ]
   },
   {
     "country_code": "AZ",
@@ -145,8 +135,7 @@
         "country": "azerbaijan",
         "province": null
       }
-    ],
-    "population": "9827589"
+    ]
   },
   {
     "country_code": "BS",
@@ -156,8 +145,7 @@
         "country": "bahamas",
         "province": null
       }
-    ],
-    "population": "395361"
+    ]
   },
   {
     "country_code": "BH",
@@ -167,8 +155,7 @@
         "country": "bahrain",
         "province": null
       }
-    ],
-    "population": "1492584"
+    ]
   },
   {
     "country_code": "BD",
@@ -178,8 +165,7 @@
         "country": "bangladesh",
         "province": null
       }
-    ],
-    "population": "164669751"
+    ]
   },
   {
     "country_code": "BB",
@@ -189,8 +175,7 @@
         "country": "barbados",
         "province": null
       }
-    ],
-    "population": "285719"
+    ]
   },
   {
     "country_code": "BY",
@@ -200,8 +185,7 @@
         "country": "belarus",
         "province": null
       }
-    ],
-    "population": "9468338"
+    ]
   },
   {
     "country_code": "BE",
@@ -211,8 +195,7 @@
         "country": "belgium",
         "province": null
       }
-    ],
-    "population": "11429336"
+    ]
   },
   {
     "country_code": "BJ",
@@ -222,8 +205,7 @@
         "country": "benin",
         "province": null
       }
-    ],
-    "population": "11175692"
+    ]
   },
   {
     "country_code": "BT",
@@ -233,8 +215,7 @@
         "country": "bhutan",
         "province": null
       }
-    ],
-    "population": "807610"
+    ]
   },
   {
     "country_code": "BO",
@@ -244,13 +225,11 @@
         "country": "bolivia",
         "province": null
       }
-    ],
-    "population": "11051600"
+    ]
   },
   {
     "country_code": "BA",
     "live_country": "Bosnia and Herzegovina",
-    "population": "3507017",
     "history_entries": [
       {
         "country": "bosnia",
@@ -266,8 +245,7 @@
         "country": "brazil",
         "province": null
       }
-    ],
-    "population": "209288278"
+    ]
   },
   {
     "country_code": "BN",
@@ -277,8 +255,7 @@
         "country": "brunei",
         "province": null
       }
-    ],
-    "population": "428697"
+    ]
   },
   {
     "country_code": "BG",
@@ -288,8 +265,7 @@
         "country": "bulgaria",
         "province": null
       }
-    ],
-    "population": "7084571"
+    ]
   },
   {
     "country_code": "BF",
@@ -299,13 +275,11 @@
         "country": "burkina faso",
         "province": null
       }
-    ],
-    "population": "19193382"
+    ]
   },
   {
     "country_code": "CV",
     "live_country": "Cabo Verde",
-    "population": "546388",
     "history_entries": [
       {
         "country": "cabo verde",
@@ -321,8 +295,7 @@
         "country": "cambodia",
         "province": null
       }
-    ],
-    "population": "16005373"
+    ]
   },
   {
     "country_code": "CM",
@@ -332,8 +305,7 @@
         "country": "cameroon",
         "province": null
       }
-    ],
-    "population": "24053727"
+    ]
   },
   {
     "country_code": "CA",
@@ -379,8 +351,7 @@
         "country": "canada",
         "province": "saskatchewan"
       }
-    ],
-    "population": "36624199"
+    ]
   },
   {
     "country_code": "CF",
@@ -390,8 +361,7 @@
         "country": "Central African Republic",
         "province": null
       }
-    ],
-    "population": "4659080"
+    ]
   },
   {
     "country_code": "TD",
@@ -401,8 +371,7 @@
         "country": "chad",
         "province": null
       }
-    ],
-    "population": "14899994"
+    ]
   },
   {
     "country_code": "CL",
@@ -412,8 +381,7 @@
         "country": "chile",
         "province": null
       }
-    ],
-    "population": "18054726"
+    ]
   },
   {
     "country_code": "CN",
@@ -543,8 +511,7 @@
         "country": "china",
         "province": "inner mongolia"
       }
-    ],
-    "population": "1409517397"
+    ]
   },
   {
     "country_code": "HK",
@@ -554,8 +521,7 @@
         "country": "china",
         "province": "hong kong"
       }
-    ],
-    "population": "7364883"
+    ]
   },
   {
     "country_code": "MO",
@@ -565,8 +531,7 @@
         "country": "china",
         "province": "macau"
       }
-    ],
-    "population": "473000"
+    ]
   },
   {
     "country_code": "CO",
@@ -576,8 +541,7 @@
         "country": "colombia",
         "province": null
       }
-    ],
-    "population": "49065615"
+    ]
   },
   {
     "country_code": "CG",
@@ -587,13 +551,11 @@
         "country": "congo",
         "province": null
       }
-    ],
-    "population": "5260750"
+    ]
   },
   {
     "country_code": "CD",
     "live_country": "DRC",
-    "population": "81340000",
     "history_entries": [
       {
         "country": "congo (kinshasa)",
@@ -609,13 +571,11 @@
         "country": "costa rica",
         "province": null
       }
-    ],
-    "population": "4905769"
+    ]
   },
   {
     "country_code": "CI",
     "live_country": "Ivory Coast",
-    "population": "24294750",
     "history_entries": [
       {
         "country": "Côte d'Ivoire",
@@ -631,13 +591,11 @@
         "country": "croatia",
         "province": null
       }
-    ],
-    "population": "4189353"
+    ]
   },
   {
     "country_code": "",
     "live_country": "Diamond Princess",
-    "population": "5000",
     "history_entries": [
       {
         "country": "diamond princess",
@@ -653,8 +611,7 @@
         "country": "cuba",
         "province": null
       }
-    ],
-    "population": "11484636"
+    ]
   },
   {
     "country_code": "CY",
@@ -664,13 +621,11 @@
         "country": "cyprus",
         "province": null
       }
-    ],
-    "population": "1179551"
+    ]
   },
   {
     "country_code": "CZ",
     "live_country": "Czechia",
-    "population": "10618303",
     "history_entries": [
       {
         "country": "czechia",
@@ -686,8 +641,7 @@
         "country": "denmark",
         "province": "faroe islands"
       }
-    ],
-    "population": "49290"
+    ]
   },
   {
     "country_code": "GL",
@@ -697,8 +651,7 @@
         "country": "denmark",
         "province": "greenland"
       }
-    ],
-    "population": "56480"
+    ]
   },
   {
     "country_code": "DK",
@@ -708,8 +661,7 @@
         "country": "denmark",
         "province": null
       }
-    ],
-    "population": "5733551"
+    ]
   },
   {
     "country_code": "DJ",
@@ -719,8 +671,7 @@
         "country": "djibouti",
         "province": null
       }
-    ],
-    "population": "956985"
+    ]
   },
   {
     "country_code": "DO",
@@ -730,8 +681,7 @@
         "country": "dominican republic",
         "province": null
       }
-    ],
-    "population": "10766998"
+    ]
   },
   {
     "country_code": "EC",
@@ -741,8 +691,7 @@
         "country": "ecuador",
         "province": null
       }
-    ],
-    "population": "16624858"
+    ]
   },
   {
     "country_code": "EG",
@@ -752,8 +701,7 @@
         "country": "egypt",
         "province": null
       }
-    ],
-    "population": "97553151"
+    ]
   },
   {
     "country_code": "SV",
@@ -763,8 +711,7 @@
         "country": "el salvador",
         "province": null
       }
-    ],
-    "population": "6377853"
+    ]
   },
   {
     "country_code": "GQ",
@@ -774,8 +721,7 @@
         "country": "equatorial guinea",
         "province": null
       }
-    ],
-    "population": "1267689"
+    ]
   },
   {
     "country_code": "ER",
@@ -785,8 +731,7 @@
         "country": "eritrea",
         "province": null
       }
-    ],
-    "population": "5068831"
+    ]
   },
   {
     "country_code": "EE",
@@ -796,8 +741,7 @@
         "country": "estonia",
         "province": null
       }
-    ],
-    "population": "1309632"
+    ]
   },
   {
     "country_code": "SZ",
@@ -807,8 +751,7 @@
         "country": "Swaziland",
         "province": null
       }
-    ],
-    "population": "1008000"
+    ]
   },
   {
     "country_code": "ET",
@@ -818,13 +761,11 @@
         "country": "ethiopia",
         "province": null
       }
-    ],
-    "population": "104957438"
+    ]
   },
   {
     "country_code": "FJ",
     "live_country": "Fiji",
-    "population": "905502",
     "history_entries": [
       {
         "country": "fiji",
@@ -840,8 +781,7 @@
         "country": "finland",
         "province": null
       }
-    ],
-    "population": "5523231"
+    ]
   },
   {
     "country_code": "GF",
@@ -851,8 +791,7 @@
         "country": "france",
         "province": "french guiana"
       }
-    ],
-    "population": "282731"
+    ]
   },
   {
     "country_code": "PF",
@@ -862,8 +801,7 @@
         "country": "france",
         "province": "french polynesia"
       }
-    ],
-    "population": "283007"
+    ]
   },
   {
     "country_code": "GP",
@@ -873,8 +811,7 @@
         "country": "france",
         "province": "guadeloupe"
       }
-    ],
-    "population": "449568"
+    ]
   },
   {
     "country_code": "YT",
@@ -884,8 +821,7 @@
         "country": "france",
         "province": "mayotte"
       }
-    ],
-    "population": "253045"
+    ]
   },
   {
     "country_code": "NC",
@@ -895,13 +831,11 @@
         "country": "france",
         "province": "new caledonia"
       }
-    ],
-    "population": "276255"
+    ]
   },
   {
     "country_code": "RE",
     "live_country": "Réunion",
-    "population": "699000",
     "history_entries": [
       {
         "country": "france",
@@ -912,7 +846,6 @@
   {
     "country_code": "BL",
     "live_country": "St. Barth",
-    "population": "9131",
     "history_entries": [
       {
         "country": "france",
@@ -923,7 +856,6 @@
   {
     "country_code": "MF",
     "live_country": "Saint Martin",
-    "population": "32125",
     "history_entries": [
       {
         "country": "france",
@@ -934,7 +866,6 @@
   {
     "country_code": "SX",
     "live_country": "Sint Maarten",
-    "population": "41109",
     "history_entries": [
       {
         "country": "netherlands",
@@ -950,8 +881,7 @@
         "country": "france",
         "province": "martinique"
       }
-    ],
-    "population": "384896"
+    ]
   },
   {
     "country_code": "FR",
@@ -961,8 +891,7 @@
         "country": "france",
         "province": null
       }
-    ],
-    "population": "64979548"
+    ]
   },
   {
     "country_code": "GA",
@@ -972,8 +901,7 @@
         "country": "gabon",
         "province": null
       }
-    ],
-    "population": "2025137"
+    ]
   },
   {
     "country_code": "GM",
@@ -983,8 +911,7 @@
         "country": "gambia",
         "province": null
       }
-    ],
-    "population": "2100568"
+    ]
   },
   {
     "country_code": "GE",
@@ -994,8 +921,7 @@
         "country": "georgia",
         "province": null
       }
-    ],
-    "population": "3912061"
+    ]
   },
   {
     "country_code": "DE",
@@ -1005,8 +931,7 @@
         "country": "germany",
         "province": null
       }
-    ],
-    "population": "82114224"
+    ]
   },
   {
     "country_code": "GH",
@@ -1016,8 +941,7 @@
         "country": "ghana",
         "province": null
       }
-    ],
-    "population": "28833629"
+    ]
   },
   {
     "country_code": "GR",
@@ -1027,8 +951,7 @@
         "country": "greece",
         "province": null
       }
-    ],
-    "population": "11159773"
+    ]
   },
   {
     "country_code": "GT",
@@ -1038,8 +961,7 @@
         "country": "guatemala",
         "province": null
       }
-    ],
-    "population": "16913503"
+    ]
   },
   {
     "country_code": "GN",
@@ -1049,8 +971,7 @@
         "country": "guinea",
         "province": null
       }
-    ],
-    "population": "12717176"
+    ]
   },
   {
     "country_code": "GY",
@@ -1060,8 +981,7 @@
         "country": "guyana",
         "province": null
       }
-    ],
-    "population": "777859"
+    ]
   },
   {
     "country_code": "HT",
@@ -1071,8 +991,7 @@
         "country": "haiti",
         "province": null
       }
-    ],
-    "population": "10981229"
+    ]
   },
   {
     "country_code": "VA",
@@ -1082,8 +1001,7 @@
         "country": "holy see",
         "province": null
       }
-    ],
-    "population": "1000"
+    ]
   },
   {
     "country_code": "HN",
@@ -1093,8 +1011,7 @@
         "country": "honduras",
         "province": null
       }
-    ],
-    "population": "9265067"
+    ]
   },
   {
     "country_code": "HU",
@@ -1104,8 +1021,7 @@
         "country": "hungary",
         "province": null
       }
-    ],
-    "population": "9721559"
+    ]
   },
   {
     "country_code": "IS",
@@ -1115,8 +1031,7 @@
         "country": "iceland",
         "province": null
       }
-    ],
-    "population": "335025"
+    ]
   },
   {
     "country_code": "IN",
@@ -1126,8 +1041,7 @@
         "country": "india",
         "province": null
       }
-    ],
-    "population": "1339180127"
+    ]
   },
   {
     "country_code": "ID",
@@ -1137,13 +1051,11 @@
         "country": "indonesia",
         "province": null
       }
-    ],
-    "population": "263991379"
+    ]
   },
   {
     "country_code": "IR",
     "live_country": "Iran",
-    "population": "81162788",
     "history_entries": [
       {
         "country": "iran",
@@ -1159,8 +1071,7 @@
         "country": "iraq",
         "province": null
       }
-    ],
-    "population": "38274618"
+    ]
   },
   {
     "country_code": "IE",
@@ -1170,8 +1081,7 @@
         "country": "ireland",
         "province": null
       }
-    ],
-    "population": "4761657"
+    ]
   },
   {
     "country_code": "IL",
@@ -1181,8 +1091,7 @@
         "country": "israel",
         "province": null
       }
-    ],
-    "population": "8321570"
+    ]
   },
   {
     "country_code": "IT",
@@ -1192,8 +1101,7 @@
         "country": "Italy",
         "province": null
       }
-    ],
-    "population": "59359900"
+    ]
   },
   {
     "country_code": "JM",
@@ -1203,8 +1111,7 @@
         "country": "jamaica",
         "province": null
       }
-    ],
-    "population": "2890299"
+    ]
   },
   {
     "country_code": "JP",
@@ -1214,8 +1121,7 @@
         "country": "japan",
         "province": null
       }
-    ],
-    "population": "127484450"
+    ]
   },
   {
     "country_code": "JO",
@@ -1225,8 +1131,7 @@
         "country": "jordan",
         "province": null
       }
-    ],
-    "population": "9702353"
+    ]
   },
   {
     "country_code": "KZ",
@@ -1236,8 +1141,7 @@
         "country": "kazakhstan",
         "province": null
       }
-    ],
-    "population": "18204499"
+    ]
   },
   {
     "country_code": "KE",
@@ -1247,13 +1151,11 @@
         "country": "kenya",
         "province": null
       }
-    ],
-    "population": "49699862"
+    ]
   },
   {
     "country_code": "KR",
     "live_country": "S. Korea",
-    "population": "50982212",
     "history_entries": [
       {
         "country": "s. korea",
@@ -1269,8 +1171,7 @@
         "country": "kuwait",
         "province": null
       }
-    ],
-    "population": "4136528"
+    ]
   },
   {
     "country_code": "KG",
@@ -1280,8 +1181,7 @@
         "country": "kyrgyzstan",
         "province": null
       }
-    ],
-    "population": "6045117"
+    ]
   },
   {
     "country_code": "LV",
@@ -1291,8 +1191,7 @@
         "country": "latvia",
         "province": null
       }
-    ],
-    "population": "1949670"
+    ]
   },
   {
     "country_code": "LB",
@@ -1302,8 +1201,7 @@
         "country": "lebanon",
         "province": null
       }
-    ],
-    "population": "6082357"
+    ]
   },
   {
     "country_code": "LR",
@@ -1313,8 +1211,7 @@
         "country": "liberia",
         "province": null
       }
-    ],
-    "population": "4731906"
+    ]
   },
   {
     "country_code": "LI",
@@ -1324,8 +1221,7 @@
         "country": "liechtenstein",
         "province": null
       }
-    ],
-    "population": "37922"
+    ]
   },
   {
     "country_code": "LT",
@@ -1335,8 +1231,7 @@
         "country": "lithuania",
         "province": null
       }
-    ],
-    "population": "2890297"
+    ]
   },
   {
     "country_code": "LU",
@@ -1346,8 +1241,7 @@
         "country": "luxembourg",
         "province": null
       }
-    ],
-    "population": "583455"
+    ]
   },
   {
     "country_code": "MG",
@@ -1357,8 +1251,7 @@
         "country": "madagascar",
         "province": null
       }
-    ],
-    "population": "25570895"
+    ]
   },
   {
     "country_code": "MY",
@@ -1368,8 +1261,7 @@
         "country": "malaysia",
         "province": null
       }
-    ],
-    "population": "31624264"
+    ]
   },
   {
     "country_code": "MV",
@@ -1379,8 +1271,7 @@
         "country": "maldives",
         "province": null
       }
-    ],
-    "population": "436330"
+    ]
   },
   {
     "country_code": "MT",
@@ -1390,8 +1281,7 @@
         "country": "malta",
         "province": null
       }
-    ],
-    "population": "430835"
+    ]
   },
   {
     "country_code": "MR",
@@ -1401,8 +1291,7 @@
         "country": "mauritania",
         "province": null
       }
-    ],
-    "population": "4420184"
+    ]
   },
   {
     "country_code": "MU",
@@ -1412,8 +1301,7 @@
         "country": "mauritius",
         "province": null
       }
-    ],
-    "population": "1265138"
+    ]
   },
   {
     "country_code": "MX",
@@ -1423,13 +1311,11 @@
         "country": "mexico",
         "province": null
       }
-    ],
-    "population": "129163276"
+    ]
   },
   {
     "country_code": "MD",
     "live_country": "Moldova",
-    "population": "4051212",
     "history_entries": [
       {
         "country": "Moldova, Republic of",
@@ -1445,8 +1331,7 @@
         "country": "monaco",
         "province": null
       }
-    ],
-    "population": "38695"
+    ]
   },
   {
     "country_code": "MN",
@@ -1456,13 +1341,11 @@
         "country": "mongolia",
         "province": null
       }
-    ],
-    "population": "3075647"
+    ]
   },
   {
     "country_code": "ME",
     "live_country": "Montenegro",
-    "population": "631219",
     "history_entries": [
       {
         "country": "montenegro",
@@ -1478,8 +1361,7 @@
         "country": "morocco",
         "province": null
       }
-    ],
-    "population": "35739580"
+    ]
   },
   {
     "country_code": "NA",
@@ -1489,8 +1371,7 @@
         "country": "namibia",
         "province": null
       }
-    ],
-    "population": "2533794"
+    ]
   },
   {
     "country_code": "NP",
@@ -1500,8 +1381,7 @@
         "country": "nepal",
         "province": null
       }
-    ],
-    "population": "29304998"
+    ]
   },
   {
     "country_code": "AW",
@@ -1511,13 +1391,11 @@
         "country": "netherlands",
         "province": "aruba"
       }
-    ],
-    "population": "105264"
+    ]
   },
   {
     "country_code": "CW",
     "live_country": "Curaçao",
-    "population": "161014",
     "history_entries": [
       {
         "country": "netherlands",
@@ -1533,8 +1411,7 @@
         "country": "netherlands",
         "province": null
       }
-    ],
-    "population": "17035938"
+    ]
   },
   {
     "country_code": "NZ",
@@ -1544,8 +1421,7 @@
         "country": "new zealand",
         "province": null
       }
-    ],
-    "population": "4705818"
+    ]
   },
   {
     "country_code": "NI",
@@ -1555,8 +1431,7 @@
         "country": "nicaragua",
         "province": null
       }
-    ],
-    "population": "6217581"
+    ]
   },
   {
     "country_code": "NE",
@@ -1566,8 +1441,7 @@
         "country": "niger",
         "province": null
       }
-    ],
-    "population": "21477348"
+    ]
   },
   {
     "country_code": "NG",
@@ -1577,13 +1451,11 @@
         "country": "nigeria",
         "province": null
       }
-    ],
-    "population": "190886311"
+    ]
   },
   {
     "country_code": "MK",
     "live_country": "North Macedonia",
-    "population": "2024000",
     "history_entries": [
       {
         "country": "Macedonia",
@@ -1599,8 +1471,7 @@
         "country": "norway",
         "province": null
       }
-    ],
-    "population": "5305383"
+    ]
   },
   {
     "country_code": "OM",
@@ -1610,8 +1481,7 @@
         "country": "oman",
         "province": null
       }
-    ],
-    "population": "4636262"
+    ]
   },
   {
     "country_code": "PK",
@@ -1621,8 +1491,7 @@
         "country": "pakistan",
         "province": null
       }
-    ],
-    "population": "197015955"
+    ]
   },
   {
     "country_code": "PA",
@@ -1632,8 +1501,7 @@
         "country": "panama",
         "province": null
       }
-    ],
-    "population": "4098587"
+    ]
   },
   {
     "country_code": "PG",
@@ -1643,8 +1511,7 @@
         "country": "papua new guinea",
         "province": null
       }
-    ],
-    "population": "8251162"
+    ]
   },
   {
     "country_code": "PY",
@@ -1654,8 +1521,7 @@
         "country": "paraguay",
         "province": null
       }
-    ],
-    "population": "6811297"
+    ]
   },
   {
     "country_code": "PE",
@@ -1665,8 +1531,7 @@
         "country": "peru",
         "province": null
       }
-    ],
-    "population": "32165485"
+    ]
   },
   {
     "country_code": "PH",
@@ -1676,8 +1541,7 @@
         "country": "philippines",
         "province": null
       }
-    ],
-    "population": "104918090"
+    ]
   },
   {
     "country_code": "PL",
@@ -1687,8 +1551,7 @@
         "country": "poland",
         "province": null
       }
-    ],
-    "population": "38170712"
+    ]
   },
   {
     "country_code": "PT",
@@ -1698,8 +1561,7 @@
         "country": "portugal",
         "province": null
       }
-    ],
-    "population": "10329506"
+    ]
   },
   {
     "country_code": "QA",
@@ -1709,8 +1571,7 @@
         "country": "qatar",
         "province": null
       }
-    ],
-    "population": "2639211"
+    ]
   },
   {
     "country_code": "RO",
@@ -1720,13 +1581,11 @@
         "country": "romania",
         "province": null
       }
-    ],
-    "population": "19679306"
+    ]
   },
   {
     "country_code": "RU",
     "live_country": "Russia",
-    "population": "143989754",
     "history_entries": [
       {
         "country": "russia",
@@ -1742,8 +1601,7 @@
         "country": "rwanda",
         "province": null
       }
-    ],
-    "population": "12208407"
+    ]
   },
   {
     "country_code": "LC",
@@ -1753,8 +1611,7 @@
         "country": "saint lucia",
         "province": null
       }
-    ],
-    "population": "178844"
+    ]
   },
   {
     "country_code": "VC",
@@ -1764,8 +1621,7 @@
         "country": "Saint Vincent and the Grenadines",
         "province": null
       }
-    ],
-    "population": "109897"
+    ]
   },
   {
     "country_code": "SM",
@@ -1775,8 +1631,7 @@
         "country": "san marino",
         "province": null
       }
-    ],
-    "population": "33400"
+    ]
   },
   {
     "country_code": "SA",
@@ -1786,8 +1641,7 @@
         "country": "saudi arabia",
         "province": null
       }
-    ],
-    "population": "32938213"
+    ]
   },
   {
     "country_code": "SN",
@@ -1797,13 +1651,11 @@
         "country": "senegal",
         "province": null
       }
-    ],
-    "population": "15850567"
+    ]
   },
   {
     "country_code": "RS",
     "live_country": "Serbia",
-    "population": "7022000",
     "history_entries": [
       {
         "country": "serbia",
@@ -1819,8 +1671,7 @@
         "country": "seychelles",
         "province": null
       }
-    ],
-    "population": "94737"
+    ]
   },
   {
     "country_code": "SG",
@@ -1830,8 +1681,7 @@
         "country": "singapore",
         "province": null
       }
-    ],
-    "population": "5708844"
+    ]
   },
   {
     "country_code": "SK",
@@ -1841,8 +1691,7 @@
         "country": "slovakia",
         "province": null
       }
-    ],
-    "population": "5447662"
+    ]
   },
   {
     "country_code": "SI",
@@ -1852,8 +1701,7 @@
         "country": "slovenia",
         "province": null
       }
-    ],
-    "population": "2079976"
+    ]
   },
   {
     "country_code": "SO",
@@ -1863,8 +1711,7 @@
         "country": "somalia",
         "province": null
       }
-    ],
-    "population": "14742523"
+    ]
   },
   {
     "country_code": "ZA",
@@ -1874,8 +1721,7 @@
         "country": "south africa",
         "province": null
       }
-    ],
-    "population": "56717156"
+    ]
   },
   {
     "country_code": "ES",
@@ -1885,13 +1731,11 @@
         "country": "spain",
         "province": null
       }
-    ],
-    "population": "46354321"
+    ]
   },
   {
     "country_code": "LK",
     "live_country": "Sri Lanka",
-    "population": "20876917",
     "history_entries": [
       {
         "country": "sri lanka",
@@ -1907,8 +1751,7 @@
         "country": "sudan",
         "province": null
       }
-    ],
-    "population": "40533330"
+    ]
   },
   {
     "country_code": "SR",
@@ -1918,8 +1761,7 @@
         "country": "suriname",
         "province": null
       }
-    ],
-    "population": "563402"
+    ]
   },
   {
     "country_code": "SE",
@@ -1929,8 +1771,7 @@
         "country": "sweden",
         "province": null
       }
-    ],
-    "population": "9910701"
+    ]
   },
   {
     "country_code": "CH",
@@ -1940,13 +1781,11 @@
         "country": "switzerland",
         "province": null
       }
-    ],
-    "population": "8476005"
+    ]
   },
   {
     "country_code": "TW",
     "live_country": "Taiwan",
-    "population": "23780000",
     "history_entries": [
       {
         "country": "taiwan*",
@@ -1957,7 +1796,6 @@
   {
     "country_code": "TZ",
     "live_country": "Tanzania",
-    "population": "57310000",
     "history_entries": [
       {
         "country": "Tanzania, United Republic of",
@@ -1973,8 +1811,7 @@
         "country": "thailand",
         "province": null
       }
-    ],
-    "population": "69037513"
+    ]
   },
   {
     "country_code": "TG",
@@ -1984,8 +1821,7 @@
         "country": "togo",
         "province": null
       }
-    ],
-    "population": "7797694"
+    ]
   },
   {
     "country_code": "TT",
@@ -1995,8 +1831,7 @@
         "country": "trinidad and tobago",
         "province": null
       }
-    ],
-    "population": "1369125"
+    ]
   },
   {
     "country_code": "TN",
@@ -2006,8 +1841,7 @@
         "country": "tunisia",
         "province": null
       }
-    ],
-    "population": "11532127"
+    ]
   },
   {
     "country_code": "TR",
@@ -2017,8 +1851,7 @@
         "country": "turkey",
         "province": null
       }
-    ],
-    "population": "80745020"
+    ]
   },
   {
     "country_code": "UG",
@@ -2028,8 +1861,7 @@
         "country": "uganda",
         "province": null
       }
-    ],
-    "population": "42862958"
+    ]
   },
   {
     "country_code": "UA",
@@ -2039,13 +1871,11 @@
         "country": "ukraine",
         "province": null
       }
-    ],
-    "population": "44222947"
+    ]
   },
   {
     "country_code": "AE",
     "live_country": "UAE",
-    "population": "9400145",
     "history_entries": [
       {
         "country": "uae",
@@ -2061,8 +1891,7 @@
         "country": "uk",
         "province": "bermuda"
       }
-    ],
-    "population": "61349"
+    ]
   },
   {
     "country_code": "KY",
@@ -2072,13 +1901,11 @@
         "country": "uk",
         "province": "cayman islands"
       }
-    ],
-    "population": "61559"
+    ]
   },
   {
     "country_code": "JE",
     "live_country": "Channel Islands",
-    "population": "170499",
     "history_entries": [
       {
         "country": "uk",
@@ -2094,13 +1921,11 @@
         "country": "uk",
         "province": "gibraltar"
       }
-    ],
-    "population": "34571"
+    ]
   },
   {
     "country_code": "IM",
     "live_country": "Isle of Man",
-    "population": "84287",
     "history_entries": [
       {
         "country": "uk",
@@ -2116,13 +1941,11 @@
         "country": "uk",
         "province": "montserrat"
       }
-    ],
-    "population": "5177"
+    ]
   },
   {
     "country_code": "GB",
     "live_country": "UK",
-    "population": "66181585",
     "history_entries": [
       {
         "country": "uk",
@@ -2138,13 +1961,11 @@
         "country": "uruguay",
         "province": null
       }
-    ],
-    "population": "3456750"
+    ]
   },
   {
     "country_code": "US",
     "live_country": "USA",
-    "population": "324459463",
     "history_entries": [
       {
         "country": "USA",
@@ -2160,13 +1981,11 @@
         "country": "uzbekistan",
         "province": null
       }
-    ],
-    "population": "31910641"
+    ]
   },
   {
     "country_code": "VE",
     "live_country": "Venezuela",
-    "population": "31977065",
     "history_entries": [
       {
         "country": "Venezuela, Bolivarian Republic of",
@@ -2177,7 +1996,6 @@
   {
     "country_code": "VN",
     "live_country": "Vietnam",
-    "population": "95540800",
     "history_entries": [
       {
         "country": "vietnam",
@@ -2193,8 +2011,7 @@
         "country": "zambia",
         "province": null
       }
-    ],
-    "population": "17094130"
+    ]
   },
   {
     "country_code": "ZW",
@@ -2204,8 +2021,7 @@
         "country": "zimbabwe",
         "province": null
       }
-    ],
-    "population": "16529904"
+    ]
   },
   {
     "country_code": "DM",
@@ -2215,8 +2031,7 @@
         "country": "dominica",
         "province": null
       }
-    ],
-    "population": "73925"
+    ]
   },
   {
     "country_code": "GD",
@@ -2226,8 +2041,7 @@
         "country": "grenada",
         "province": null
       }
-    ],
-    "population": "107825"
+    ]
   },
   {
     "country_code": "MZ",
@@ -2237,13 +2051,11 @@
         "country": "mozambique",
         "province": null
       }
-    ],
-    "population": "29668834"
+    ]
   },
   {
     "country_code": "SY",
     "live_country": "Syria",
-    "population": "18270000",
     "history_entries": [
       {
         "country": "Syrian Arab Republic",
@@ -2254,7 +2066,6 @@
   {
     "country_code": "TL",
     "live_country": "Timor-Leste",
-    "population": "1296311",
     "history_entries": [
       {
         "country": "timor-leste",
@@ -2270,13 +2081,11 @@
         "country": "belize",
         "province": null
       }
-    ],
-    "population": "374681"
+    ]
   },
   {
     "country_code": "LA",
     "live_country": "Laos",
-    "population": "6858000",
     "history_entries": [
       {
         "country": "Lao People's Democratic Republic",
@@ -2292,13 +2101,11 @@
         "country": "Libyan Arab Jamahiriya",
         "province": null
       }
-    ],
-    "population": "5605000"
+    ]
   },
   {
     "country_code": "PS",
     "live_country": "Palestine",
-    "population": "4920724",
     "history_entries": [
       {
         "country": "west bank and gaza",
@@ -2314,8 +2121,7 @@
         "country": "guinea-bissau",
         "province": null
       }
-    ],
-    "population": "1861283"
+    ]
   },
   {
     "country_code": "ML",
@@ -2325,8 +2131,7 @@
         "country": "mali",
         "province": null
       }
-    ],
-    "population": "18541980"
+    ]
   },
   {
     "country_code": "KN",
@@ -2336,13 +2141,11 @@
         "country": "saint kitts and nevis",
         "province": null
       }
-    ],
-    "population": "55345"
+    ]
   },
   {
     "country_code": "VG",
     "live_country": "British Virgin Islands",
-    "population": "31196",
     "history_entries": [
       {
         "country": "UK",
@@ -2358,8 +2161,7 @@
         "country": "UK",
         "province": "turks and caicos islands"
       }
-    ],
-    "population": "35446"
+    ]
   },
   {
     "country_code": "AI",
@@ -2369,19 +2171,16 @@
         "country": "UK",
         "province": "anguilla"
       }
-    ],
-    "population": "14909"
+    ]
   },
   {
     "country_code": "MM",
     "live_country": "Myanmar",
-    "history_entries": [],
-    "population": "53370609"
+    "history_entries": []
   },
   {
     "country_code": "",
     "live_country": "MS Zaandam",
-    "population": "4000",
     "history_entries": [
       {
         "country": "MS Zaandam",
@@ -2392,19 +2191,16 @@
   {
     "country_code": "BI",
     "live_country": "Burundi",
-    "population": "10860000",
     "history_entries": []
   },
   {
     "country_code": "SL",
     "live_country": "Sierra Leone",
-    "population": "7557000",
     "history_entries": []
   },
   {
     "country_code": "BW",
     "live_country": "Botswana",
-    "population": "2292000",
     "history_entries": [
       {
         "country": "Botswana",
